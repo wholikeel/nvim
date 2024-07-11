@@ -7,16 +7,18 @@ return {
 		configs.setup {
           		ensure_installed = {
 				"query",
-				"c", 
-				"lua", 
-				"vim", 
-				"vimdoc", 
-				"cpp", 
+				"c",
+				"lua",
+				"vim",
+				"vimdoc",
+				"cpp",
 				"cmake",
+                "html",
+                "xml"
 			},
           		sync_install = false,
           		highlight = { enable = true },
-          		indent = { enable = true },  
+          		indent = { enable = true },
         	}
 	end,
 }
