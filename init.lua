@@ -1,4 +1,6 @@
-require("options")
 
 require("config.lazy")
+require("options")
 --require "snippets"
+
+

@@ -24,7 +24,7 @@ require("lazy").setup({
         { import = "plugins" },
     },
 
-    install = { colorscheme = { "rose-pine" } },
+    --install = { colorscheme = { "rose-pine" } },
 
     checker = { enabled = false },
 })

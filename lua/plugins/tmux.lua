@@ -2,4 +2,5 @@
 return {
 	"aserowy/tmux.nvim",
     lazy = false,
+    enable = false
 }
