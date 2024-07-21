@@ -80,6 +80,7 @@ lspconfig.html.setup { capabilities = capabilities }
 lspconfig.lemminx.setup { capabilities = capabilities }
 lspconfig.nixd.setup { capabilities = capabilities }
 lspconfig.pylsp.setup { capabilities = capabilities }
+lspconfig.gopls.setup { capabilities = capabilities }
 --lspconfig.ruff.setup { capabilities = capabilities }
 lspconfig.texlab.setup { capabilities = capabilities }
 lspconfig.hls.setup {
