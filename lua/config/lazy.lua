@@ -26,5 +26,21 @@ require("lazy").setup({
 
     --install = { colorscheme = { "rose-pine" } },
 
+    -- defaults = { lazy =  },
     checker = { enabled = false },
+    ui = { border = "rounded" },
+    performance = {
+        cache = {
+            enabled = true,
+        },
+        rtp = {
+            disabled_plugins = {
+                "gzip",
+                "tarPlugin",
+                "tohtml",
+                "tutor",
+                "zipPlugin"
+            },
+        },
+    },
 })
