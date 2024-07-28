@@ -38,7 +38,7 @@ return {
                 },
             },
         },
-        notes_subdir = "1 Inbox",
+        notes_subdir = "4 Inbox",
         new_notes_location = "notes_subdir",
         templates = {
             folder = "Templates",
