@@ -14,7 +14,8 @@ return {
 				"cpp",
 				"cmake",
                 "html",
-                "xml"
+                "xml",
+                "markdown"
 			},
           		sync_install = false,
           		highlight = { enable = true },
