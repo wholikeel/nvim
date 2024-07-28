@@ -87,3 +87,15 @@ lspconfig.hls.setup {
     capabilities = capabilities,
     filetypes = { 'haskell', 'lhaskell', 'cabal' },
 }
+lspconfig.pylsp.setup{
+  settings = {
+    pylsp = {
+      plugins = {
+        pycodestyle = {
+          ignore = {'W391'},
+          maxLineLength = 80
+        }
+      }
+    }
+  }
+}
