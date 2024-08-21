@@ -73,29 +73,10 @@ lspconfig.lua_ls.setup {
     }
 }
 
-lspconfig.cmake.setup { capabilities = capabilities }
-lspconfig.clangd.setup { capabilities = capabilities }
-lspconfig.marksman.setup { capabilities = capabilities }
-lspconfig.html.setup { capabilities = capabilities }
-lspconfig.lemminx.setup { capabilities = capabilities }
-lspconfig.nixd.setup { capabilities = capabilities }
-lspconfig.pylsp.setup { capabilities = capabilities }
-lspconfig.gopls.setup { capabilities = capabilities }
---lspconfig.ruff.setup { capabilities = capabilities }
-lspconfig.texlab.setup { capabilities = capabilities }
-lspconfig.hls.setup {
-    capabilities = capabilities,
-    filetypes = { 'haskell', 'lhaskell', 'cabal' },
-}
-lspconfig.pylsp.setup{
-  settings = {
-    pylsp = {
-      plugins = {
-        pycodestyle = {
-          ignore = {'W391'},
-          maxLineLength = 80
-        }
-      }
-    }
-  }
-}
+
+local servers = require "plugins.editor.lsp.servers"
+for server, opts in pairs(servers) do
+    opts["capabilities"] = capabilities
+    lspconfig[server].setup(opts)
+end
+

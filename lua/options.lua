@@ -1,22 +1,28 @@
+local Options = require("util").Options
+local Globals = require("util").Globals
 
 -- vim.g.mapleader = " "
 -- vim.g.maplocalleader = ","
 
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.tabstop = 4
-vim.opt.expandtab = true
-vim.opt.shiftwidth = 4
-vim.opt.conceallevel = 2
+---@class VimOptions
+vim.o = vim.o
 
-vim.opt.colorcolumn = "79"
+Options {
+    number = true,
+    relativenumber = true,
+    tabstop = 4,
+    expandtab = true,
+    shiftwidth = 4,
+    conceallevel = 2,
+    colorcolumn = "79",
+    termguicolors = true,
+}
 
+Globals {
+    netrw_browse_split = 0,
+    netrw_banner = 0,
+    netrw_winsize = 25,
+}
 
-vim.opt.termguicolors = true
-
-vim.g.netrw_browse_split = 0
-vim.g.netrw_banner = 0
-vim.g.netrw_winsize = 25
 
 --vim.opt.statuscolumn = require "statuscolumn" .myStatuscolumn();
-
