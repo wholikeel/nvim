@@ -13,19 +13,25 @@ local M = {
     hls = {
         filetypes = { 'haskell', 'lhaskell', 'cabal' },
     },
-    pylsp = {
-        settings = {
-            pylsp = {
-                plugins = {
-                    pycodestyle = {
-                        ignore = { 'W391' },
-                        maxLineLength = 80
-                    }
-                }
-            }
+    basedpyright = {
+        analysis = {
+            autoSearchPaths = true,
+            diagnosticMode = "openFilesOnly",
+            useLibraryCodeForTypes = true
         }
-    }
+    },
+    -- pylsp = {
+    --     settings = {
+    --         pylsp = {
+    --             plugins = {
+    --                 pycodestyle = {
+    --                     ignore = { 'W391' },
+    --                     maxLineLength = 80
+    --                 }
+    --             }
+    --         }
+    --     }
+    -- }
 }
 
 return M
-
