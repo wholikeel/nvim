@@ -20,6 +20,12 @@ local M = {
             useLibraryCodeForTypes = true
         }
     },
+    jdtls = {
+    },
+    zls = {
+    },
+    -- Conflicts with rustaceanvim
+    -- rust_analyzer = {},
     -- pylsp = {
     --     settings = {
     --         pylsp = {

@@ -7,7 +7,10 @@ local M = {
     dependencies = {
         "hrsh7th/nvim-cmp"
     },
-    config = function()
+    opts = {
+        inlay_hints = { enabled = true },
+    },
+    config = function(self, opts)
         require "plugins.editor.lsp.config"
     end,
     keys = {

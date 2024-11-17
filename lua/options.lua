@@ -13,7 +13,7 @@ Options {
     tabstop = 4,
     expandtab = true,
     shiftwidth = 4,
-    conceallevel = 2,
+    -- conceallevel = 2,
     colorcolumn = "79",
     termguicolors = true,
 }
@@ -22,6 +22,12 @@ Globals {
     netrw_browse_split = 0,
     netrw_banner = 0,
     netrw_winsize = 25,
+}
+
+vim.filetype.add {
+    extension = {
+        hc = "hc",
+    }
 }
 
 

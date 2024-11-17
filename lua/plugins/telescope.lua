@@ -12,16 +12,19 @@ local M = {
     cmd = "Telescope",
     version = false,
     dependencies = {
-        {"nvim-telescope/telescope-fzf-native.nvim", build = "make"}
+        { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+        "ThePrimeagen/git-worktree.nvim"
     },
     keys = {
-        { "<leader>ff", "<cmd>Telescope find_files<cr>",                desc = "Telescope Find Files" },
-        { "<leader>fh", "<cmd>Telescope help_tags<cr>",                 desc = "Telescope Find Help" },
-        { "<leader>fg", "<cmd>Telescope live_grep<cr>",                 desc = "Telescope live grep" },
+        { "<leader>ff",  "<cmd>Telescope find_files<cr>",                       desc = "Telescope Find Files" },
+        { "<leader>fh",  "<cmd>Telescope help_tags<cr>",                        desc = "Telescope Find Help" },
+        { "<leader>fg",  "<cmd>Telescope live_grep<cr>",                        desc = "Telescope live grep" },
         -- doesnt work
         --{ "<leader>fi", require("telescope.builtin").lsp_document_symbols({ symbols='function' }), desc = "Telescope live grep" },
-        { "<leader>/",  "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Telescope current buffer fuzzy find" },
-        { "<leader>gw", "<cmd>Telescope grep_string<cr>",               desc = "Telescope grep string" },
+        { "<leader>/",   "<cmd>Telescope current_buffer_fuzzy_find<cr>",        desc = "Telescope current buffer fuzzy find" },
+        { "<leader>gw",  "<cmd>Telescope grep_string<cr>",                      desc = "Telescope grep string" },
+        { "<leader>fw",  "<cmd>Telescope git_worktree git_worktrees<cr>",       desc = "Telescope Git worktrees" },
+        { "<leader>fcw", "<cmd>Telescope git_worktree create_git_worktree<cr>", desc = "Telescope Create Git worktree" },
     },
     opts = {
         extensions = {
@@ -40,6 +43,7 @@ local M = {
         telescope.setup(opts)
         -- telescope.load_extension("fzf")
         telescope.load_extension("refactoring")
+        telescope.load_extension("git_worktree")
     end
 }
 

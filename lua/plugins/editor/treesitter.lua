@@ -1,3 +1,4 @@
+--- @type LazyPluginSpec
 local M = { "nvim-treesitter/nvim-treesitter" }
 
 M.build = ":TSUpdate"
@@ -15,7 +16,10 @@ M.opts = {
         "cmake",
         "html",
         "xml",
-        "markdown"
+        "markdown",
+        "java",
+        "json5",
+        "rust",
     },
     sync_install = false,
     highlight = { enable = true },

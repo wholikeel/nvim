@@ -4,6 +4,7 @@ require("config.types")
 local M = {
     require "plugins.integration.tmux",
     require "plugins.integration.gitsigns",
+    require "plugins.integration.worktree",
 }
 
 
