@@ -4,4 +4,6 @@ M.config = function()
   require "nvchad"
 end
 
-return {}
+M.enabled = false
+
+return M
