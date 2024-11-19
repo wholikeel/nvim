@@ -5,10 +5,11 @@ M.spec = {
   { import = "plugins.tools" },
   { import = "plugins.ui" },
   { import = "plugins.integration" },
+  { import = "plugins.languages" },
 }
 
 M.install = {
-  colorscheme = { "nvchad" }
+  -- colorscheme = { "nvchad" }
 }
 
 M.checker = { enabled = true }
