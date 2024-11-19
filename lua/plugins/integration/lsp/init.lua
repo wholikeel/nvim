@@ -2,6 +2,7 @@
 local M = { "neovim/nvim-lspconfig" }
 
 M.dependencies = { "saghen/blink.cmp" }
+M.lazy = false
 
 M.opts = {
   servers = require("plugins.integration.lsp.servers"),

@@ -21,7 +21,14 @@ local M = function(_, opts)
       local bufopts = { buffer = ev.buf }
       vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
-      vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
+      vim.keymap.set('n', 'K', function()
+        local ft = vim.bo.filetype
+        if ft == "rust" then
+          vim.cmd.RustLsp({"hover", "actions"})
+        else
+          vim.lsp.buf.hover()
+        end
+      end , bufopts)
       vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
       vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
       vim.keymap.set('n', '<leader>wa', vim.lsp.buf.add_workspace_folder, bufopts)

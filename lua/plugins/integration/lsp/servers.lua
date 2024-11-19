@@ -26,7 +26,8 @@ local M = {
   lua_ls = {
     on_init = function(client)
       local path = client.workspace_folders[1].name
-      if vim.uv.fs_stat(path .. "/.luarc.json") or vim.uv.fs_stat(path .. "/.luarc.jsonc") then
+      local uv = vim.uv or vim.loop
+      if uv.fs_stat(path .. "/.luarc.json") or uv.fs_stat(path .. "/.luarc.jsonc") then
         return
       end
 
