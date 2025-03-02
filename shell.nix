@@ -1,5 +1,5 @@
 { pkgs ? import <nixpkgs> { } }:
-pkgs.mkShell.override { 
+pkgs.mkShell.override {
   stdenv = pkgs.gcc14Stdenv;
 } {
   packages = with pkgs; [
@@ -14,6 +14,7 @@ pkgs.mkShell.override {
     curlFull
     jq
     libxml2
+    tree-sitter
   ];
 }
 

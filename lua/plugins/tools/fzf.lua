@@ -1,23 +1,14 @@
--- local M = { "nvim-telescope/telescope.nvim" }
---
--- M.tag = '0.1.8'
---
--- M.dependencies = { "nvim-lua/plenary.nvim" }
---
--- return M
-
-
 local M = { "ibhagwan/fzf-lua" }
 
 M.dependencies = { "echasnovski/mini.icons" }
 
--- M.config = function(self, opts)
---   require("fzf-lua").setup(opts)
--- end
 
 M.opts = {
   fzf_colors = true,
-  border = "none"
+  border = "none",
+  winopts = {
+    border = "none"
+  }
 }
 
 M.keys = {
@@ -25,11 +16,23 @@ M.keys = {
     "<leader>ff",
     function()
       require("fzf-lua").files({
-        winopts = {
-          border = "none"
-        }
       })
-    end
+    end,
+    desc = "FZF - Find files"
+  },
+  {
+    "<leader>fg",
+    function()
+      require("fzf-lua").git_files()
+    end,
+    desc = "FZF - Git files"
+  },
+  {
+    "<leader>fgs",
+    function()
+      require("fzf-lua").git_files()
+    end,
+    desc = "FZF - Git files"
   }
 }
 

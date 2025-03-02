@@ -13,7 +13,7 @@ local mkObjMerger = function(obj)
 end
 
 
-local ap = function(func, ...)
+M.ap = function(func, ...)
   local args = {...}
   return function () func(table.unpack(args)) end
 end
@@ -21,7 +21,7 @@ end
 
 M.Options = mkObjMerger(vim.o)
 M.Globals = mkObjMerger(vim.g)
-M.ap = ap
+-- M.ap = ap
 
 
 return M

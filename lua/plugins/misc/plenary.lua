@@ -2,6 +2,6 @@
 local M = { "nvim-lua/plenary.nvim" }
 
 M.lazy = true
-M.enabled = false
+-- M.enabled = false
 
 return M

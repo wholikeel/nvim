@@ -1,5 +1,5 @@
 local quickfix = function()
-  vim.lsp.code_action({
+  vim.lsp.buf.code_action({
     filter = function(o) return o.isPreferred end,
     apply = true
   })
@@ -41,6 +41,9 @@ local M = function(_, opts)
       vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
       vim.keymap.set({ 'n', 'v' }, '<leader>ca', quickfix, bufopts)
       vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
+
+      vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, bufopts)
+      -- vim.keymap.set('n', '[d', vim.diagnostic.jump, bufopts)
 
       vim.keymap.set('n', '<leader>f', function()
         vim.lsp.buf.format { async = true }

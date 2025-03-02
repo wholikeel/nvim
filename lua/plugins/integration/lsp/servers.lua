@@ -9,6 +9,8 @@ local M = {
   texlab = {},
   ts_ls = {},
   purescriptls = {},
+  jdtls = {
+  },
   hls = {
     filetypes = {
       "haskell",
@@ -23,6 +25,7 @@ local M = {
       useLibraryCodeForTypes = true,
     }
   },
+  gdscript = {},
   lua_ls = {
     on_init = function(client)
       local path = client.workspace_folders[1].name
@@ -38,7 +41,9 @@ local M = {
         workspace = {
           checkThirdParty = false,
           library = {
-            vim.env.VIMRUNTIME
+            vim.env.VIMRUNTIME,
+            "$XDG_DATA_HOME/nvim/lazy",
+            "${3rd}/luv/library"
           }
         }
       })

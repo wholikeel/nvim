@@ -1,3 +1,4 @@
+---@class LazyConfig
 local M = {}
 
 M.spec = {
