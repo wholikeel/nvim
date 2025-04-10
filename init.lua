@@ -3,7 +3,6 @@ if not vim.fn.has("nvim-0.11") then
   return
 end
 
-
 require("config")
 
 
