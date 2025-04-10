@@ -8,52 +8,30 @@ M.dependencies = {
   "xzbdmw/colorful-menu.nvim"
 }
 
-M.version = "v0.9.0"
+M.version = "v1.0.0"
+M.lazy = false
 
-M.event = "InsertEnter"
-
+---@module "blink.cmp"
+---@type blink.cmp.Config
 M.opts = {
-  keymap = { preset = "default" },
-
-  -- highlight = {
-  --   use_nvim_cmp_as_default = true,
-  -- },
-
-  -- nerd_font_variant = "mono",
-
-  sources = {
-    default = { "lazydev", "lsp", "path", "snippets", "buffer" },
-    cmdline = {},
-    providers = {
-      lazydev = {
-        name = "LazyDev",
-        module = "lazydev.integrations.blink",
-        score_offset = 100,
-      }
-    },
+  keymap = {
+    preset = "default"
+  },
+  appearance = {
+    nerd_font_variant = "mono"
   },
   completion = {
-    menu = {
-      draw = {
-        -- We don't need label_description now because label and label_description are already
-        -- conbined together in label by colorful-menu.nvim.
-        columns = { { "kind_icon" }, { "label", gap = 1 } },
-        components = {
-          label = {
-            text = function(ctx)
-              return require("colorful-menu").blink_components_text(ctx)
-            end,
-            highlight = function(ctx)
-              return require("colorful-menu").blink_components_highlight(ctx)
-            end,
-          },
-        },
-      },
-    },
+    documentation = {
+      auto_show = false
+    }
+  },
+  sources = {
+    default = { "lsp", "path", "snippets", "buffer" },
   },
 
-  signature = { enabled = true }
-
+  fuzzy = { implementation = "prefer_rust_with_warning" }
 }
+
+
 
 return M

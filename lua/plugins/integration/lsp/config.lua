@@ -8,8 +8,7 @@ end
 local M = function(_, opts)
   local lspconfig = require("lspconfig")
   for server, config in pairs(opts.servers or {}) do
-    config.capabilities =
-        require("blink.cmp").get_lsp_capabilities(config.capabilities)
+    config.capabilities = require("blink.cmp").get_lsp_capabilities()
     lspconfig[server].setup(config)
   end
 
