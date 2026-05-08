@@ -15,7 +15,22 @@
       in
       {
         formatter = pkgs.nixfmt-rfc-style;
-        devShells.default = pkgs.callPackage ./shell.nix { };
+        devShells.default = pkgs.mkShell {
+            packages = with pkgs; [
+                lua-language-server
+                stylua
+                marksman
+                nixd
+                nixfmt-rfc-style
+                nodejs
+                tree-sitter
+
+                curlFull
+                jq
+                libxml2
+                tree-sitter
+            ];
+        };
       }
     );
 }

@@ -1,2 +1,0 @@
--- vim.lsp.config("hls", { cmd = { "haskell-language-server", "--lsp" } })
--- vim.lsp.enable({ "hls" })
