@@ -1,0 +1,40 @@
+{
+  "plugins": {
+    "LuaSnip": {
+      "rev": "de10d8414235b0a8cabfeba60d07c24304e71f5c",
+      "src": "https://github.com/L3MON4D3/LuaSnip"
+    },
+    "blink.cmp": {
+      "rev": "6731979aa370be0e5c7cc73258ce945730a515c9",
+      "src": "https://github.com/saghen/blink.cmp"
+    },
+    "gruber-darker.nvim": {
+      "rev": "a2dda61d9c1225e16951a51d6b89795b0ac35cd6",
+      "src": "https://github.com/blazkowolf/gruber-darker.nvim"
+    },
+    "mini.pick": {
+      "rev": "82ec629ca108c7b96b8b9bb733d235b39e137690",
+      "src": "https://github.com/echasnovski/mini.pick"
+    },
+    "nvim-jdtls": {
+      "rev": "4d77ff02063cf88963d5cf10683ab1fd15d072de",
+      "src": "https://github.com/mfussenegger/nvim-jdtls"
+    },
+    "nvim-lspconfig": {
+      "rev": "276ce3bc878243dc63c32b75790c4296d11848f6",
+      "src": "https://github.com/neovim/nvim-lspconfig"
+    },
+    "refer.nvim": {
+      "rev": "484a41a16609a97d46e2574861662b3fbf51288f",
+      "src": "https://github.com/juniorsundar/refer.nvim"
+    },
+    "vague.nvim": {
+      "rev": "676e5b4d74f32ff91c1583eba9c326d2b749672f",
+      "src": "https://github.com/vague2k/vague.nvim"
+    },
+    "vimtex": {
+      "rev": "2e1bbabeb2c34bb17d7bc8cfdf8f95b16dd0db0c",
+      "src": "https://github.com/lervag/vimtex"
+    }
+  }
+}
